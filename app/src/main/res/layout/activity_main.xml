@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Выбрала этот макет, т.к. он больше соответствует задаче-->
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".MainActivity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:layout_margin="14dp"
+        android:gravity="right"
+        android:padding="@dimen/padding_result"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fontSizeResult"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/activity_keyboard"/>
 
 
-</TableLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+</LinearLayout>
